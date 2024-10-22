@@ -7,7 +7,7 @@ class DioClient {
 
   DioClient() {
     _dio.options
-      ..baseUrl = ApiEndpoints.BaseUrl
+      ..baseUrl = ApiEndpoints.kBaseUrl
       ..connectTimeout = const Duration(seconds: 30)
       ..receiveTimeout = const Duration(seconds: 30)
       ..headers = {

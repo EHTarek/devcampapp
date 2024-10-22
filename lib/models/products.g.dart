@@ -26,7 +26,8 @@ Products _$ProductsFromJson(Map<String, dynamic> json) => Products(
       reviews: json['reviews'] as List<dynamic>?,
       returnPolicy: json['returnPolicy'] as String?,
       minimumOrderQuantity: (json['minimumOrderQuantity'] as num?)?.toInt(),
-      images: json['images'] as List<dynamic>?,
+      images:
+          (json['images'] as List<dynamic>?)?.map((e) => e as String).toList(),
       thumbnail: json['thumbnail'] as String?,
     );
 

@@ -9,7 +9,7 @@ class ProductsRepo {
   ProductsRepo(this.ref);
 
   Future<List<Products>> getProducts() async {
-    final response = await ref.read(dioProvider).get(ApiEndpoints.GetProductsEndPoint);
+    final response = await ref.read(dioProvider).get(ApiEndpoints.kGetProductsEndPoint);
     if (response.statusCode == 200) {
       List<Products> products = response.data['products'].map<Products>((product) {
         return Products.fromJson(product);

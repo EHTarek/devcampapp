@@ -23,7 +23,7 @@ class Products {
   List? reviews;
   String? returnPolicy;
   int? minimumOrderQuantity;
-  List<dynamic>? images;
+  List<String>? images;
   String? thumbnail;
 
 
@@ -51,6 +51,7 @@ class Products {
     this.thumbnail,
   });
 
-  factory Products.fromJson(Map<String, dynamic> json) =>
-      _$ProductsFromJson(json);
+  factory Products.fromJson(Map<String, dynamic> json) => _$ProductsFromJson(json);
+
+  Map<String, dynamic> toJson() => _$ProductsToJson(this);
 }
